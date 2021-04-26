@@ -9,8 +9,16 @@ function addActiveClass(event){
     if (activeNumbers.length < 5 && !activeNumbers.includes(event.target)){
         event.target.classList.toggle('active');
         activeNumbers.push(event.target);
+    } else if (activeNumbers.includes(event.target)){
+        let currentIndex = activeNumbers.indexOf(event.target);
+        activeNumbers.splice(currentIndex, 1);
+        event.target.classList.toggle('active');
+    } else {
+        event.target.classList.toggle('active');
+        activeNumbers.push(event.target);
+        let currentVal = activeNumbers.shift();
+        currentVal.classList.remove('active');
     }
-    console.log(activeNumbers)
 }
 
 allNumbers.forEach(element=>{
@@ -23,3 +31,5 @@ allNumbers.forEach(element=>{
 // Check whether the array already contains the element
 // If it does, don't add it.
 
+// If a sixth element is clicked, remove the first value in the array
+// Add the sixth element
