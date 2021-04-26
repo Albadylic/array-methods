@@ -6,7 +6,7 @@ const allNumbers = Array.from(document.getElementsByClassName("number"))
 let activeNumbers = [];
 
 function addActiveClass(event){
-    if (activeNumbers.length < 5){
+    if (activeNumbers.length < 5 && !activeNumbers.includes(event.target)){
         event.target.classList.toggle('active');
         activeNumbers.push(event.target);
     }
@@ -20,5 +20,6 @@ allNumbers.forEach(element=>{
 // When a number is clicked, add the element to an array
 // Only add the number if there are less than 5 numbers already
 
-
+// Check whether the array already contains the element
+// If it does, don't add it.
 
