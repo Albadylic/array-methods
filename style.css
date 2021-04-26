@@ -1,0 +1,18 @@
+#number-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: cornsilk;
+}
+
+.number {
+  border: black 4px double;
+  background: floralwhite;
+  text-align: center;
+  padding: 3vh;
+  cursor: pointer;
+}
+
+.active {
+  background-color: chartreuse;
+}

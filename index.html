@@ -4,29 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Array Methods</title>
 </head>
 <body>
     <h1>Array Methods</h1>
 
     <section id="number-container">
-        <p>12</p>
-        <p>16</p>
-        <p>7</p>
-        <p>15</p>
-        <p>9</p>
-        <p>13</p>
-        <p>5</p>
-        <p>6</p>
-        <p>4</p>
-        <p>6</p>
+        <p class="number">12</p>
+        <p class="number">16</p>
+        <p class="number">7</p>
+        <p class="number">15</p>
+        <p class="number">9</p>
+        <p class="number">13</p>
+        <p class="number">5</p>
+        <p class="number">6</p>
+        <p class="number">4</p>
+        <p class="number">6</p>
     </section>
 
     <label for="doubler">Double all chosen values</label>
-    <input type="radio" value="double-map" name="doubler">
+    <input type="radio" value="double-map" name="method" id="doubler">
 
     <label for="multiples">Remove all that aren't divisible by 3</label>
-    <input type="radio" value="factor-filter" name="multiples">
-    
+    <input type="radio" value="factor-filter" name="method" id="multiples">
+
+    <button>Go!</button>
+
+    <h3>Result</h3>
+
+    <script src="script.js"></script>
 </body>
 </html>
