@@ -6,14 +6,19 @@ const allNumbers = Array.from(document.getElementsByClassName("number"))
 let activeNumbers = [];
 
 function addActiveClass(event){
-    event.target.classList.toggle('active');
+    if (activeNumbers.length < 5){
+        event.target.classList.toggle('active');
+        activeNumbers.push(event.target);
+    }
+    console.log(activeNumbers)
 }
 
 allNumbers.forEach(element=>{
-    addEventListener("click", addActiveClass);
+    element.addEventListener("click", addActiveClass);
 })
 
-// When a number is clicked, add the value to an array.
+// When a number is clicked, add the element to an array
+// Only add the number if there are less than 5 numbers already
 
 
 
