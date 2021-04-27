@@ -2,6 +2,7 @@
 // And remove it if the element has the class already
 
 // When a number is clicked, add the element to an array
+
 // Only add the number if there are less than 5 numbers already
 
 // Check whether the array already contains the element
@@ -41,11 +42,16 @@ allNumbers.forEach(element=>{
 
 const goButton = document.getElementById("go-button");
 const output = document.getElementById("result-output");
+const radioButtons = Array.from(document.querySelectorAll("input"));
 
 const calculateResult = () => {
     let numbersContent = activeNumbers.map(element => element.textContent)
 
-    console.log(onlyDivisible(numbersContent))
+    if (radioButtons[0].checked){
+        numbersContent = doubler(numbersContent);
+    } else if (radioButtons[1].checked){
+        numbersContent = onlyDivisible(numbersContent);
+    }
 
     output.textContent = numbersContent.join(", ")
 }
