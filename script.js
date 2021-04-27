@@ -34,3 +34,18 @@ allNumbers.forEach(element=>{
     element.addEventListener("click", addActiveClass);
 })
 
+// Now that we have a maximum of five numbers
+// When the button is clicked, replace 'Result' with the result
+
+// Let's start with a function which outputs the numbers selected
+
+const goButton = document.getElementById("go-button");
+const output = document.getElementById("result-output");
+
+const calculateResult = () => {
+    let numbersContent = activeNumbers.map(element => element.textContent)
+    output.textContent = numbersContent.join(", ")
+}
+
+goButton.addEventListener("click", calculateResult);
+
