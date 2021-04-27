@@ -44,8 +44,21 @@ const output = document.getElementById("result-output");
 
 const calculateResult = () => {
     let numbersContent = activeNumbers.map(element => element.textContent)
+
+    console.log(onlyDivisible(numbersContent))
+
     output.textContent = numbersContent.join(", ")
 }
 
 goButton.addEventListener("click", calculateResult);
 
+// Now let's write specific functions for doubling and dividing
+// We'll call these functions inside calculateResult
+
+const doubler = (valuesArray) => {
+    return valuesArray.map((value)=> value *=2)
+}
+
+const onlyDivisible = (valuesArray) => {
+    return valuesArray.filter((value)=> value % 3 === 0)
+}
