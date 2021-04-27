@@ -1,6 +1,15 @@
 // When a number is clicked, give it the active class
 // And remove it if the element has the class already
 
+// When a number is clicked, add the element to an array
+// Only add the number if there are less than 5 numbers already
+
+// Check whether the array already contains the element
+// If it does, don't add it.
+
+// If a sixth element is clicked, remove the first value in the array
+// Add the sixth element
+
 const allNumbers = Array.from(document.getElementsByClassName("number"))
 
 let activeNumbers = [];
@@ -25,11 +34,3 @@ allNumbers.forEach(element=>{
     element.addEventListener("click", addActiveClass);
 })
 
-// When a number is clicked, add the element to an array
-// Only add the number if there are less than 5 numbers already
-
-// Check whether the array already contains the element
-// If it does, don't add it.
-
-// If a sixth element is clicked, remove the first value in the array
-// Add the sixth element
