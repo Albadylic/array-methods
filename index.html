@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Array Methods</title>
+    <script src="coaching.js" defer></script>
 </head>
 <body>
     <h1>Array Methods</h1>
@@ -24,15 +25,13 @@
     </section>
 
     <label for="doubler">Double all chosen values</label>
-    <input type="radio" value="double-map" name="method" id="doubler" checked>
+    <input type="radio" value="double-map" name="method" id="doubler">
     <br>
-    <label for="multiples">Show all that aren't divisible by 3</label>
-    <input type="radio" value="factor-filter" name="method" id="multiples">
+    <label for="multiples">Show all that are divisible by 3</label>
+    <input type="radio" value="factor-filter" name="method" id="multiples" checked>
 
     <button id="go-button">Go!</button>
 
     <h3 id="result-output">Result</h3>
-
-    <script src="script.js"></script>
 </body>
 </html>

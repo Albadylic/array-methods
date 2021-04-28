@@ -1,5 +1,12 @@
+// PART ONE
+
+// Get all numbers from the document and add the ELEMENTS to an array
+// We'll handle the values later on
+
+// Add an event listener to every element
+
 // When a number is clicked, give it the active class
-// And remove it if the element has the class already
+// And remove the class if the element has the class already
 
 // When a number is clicked, add the element to an array
 
@@ -8,10 +15,10 @@
 // Check whether the array already contains the element
 // If it does, don't add it.
 
-// If a sixth element is clicked, remove the first value in the array
+// If a sixth element is clicked, remove the first element in the array
 // Add the sixth element
 
-const allNumbers = Array.from(document.getElementsByClassName("number"))
+const allNumbers = Array.from(document.getElementsByClassName("number"));
 
 let activeNumbers = [];
 
@@ -35,6 +42,8 @@ allNumbers.forEach(element=>{
     element.addEventListener("click", addActiveClass);
 })
 
+// PART TWO
+
 // Now that we have a maximum of five numbers
 // When the button is clicked, replace 'Result' with the result
 
@@ -57,6 +66,8 @@ const calculateResult = () => {
 }
 
 goButton.addEventListener("click", calculateResult);
+
+// PART THREE
 
 // Now let's write specific functions for doubling and dividing
 // We'll call these functions inside calculateResult
