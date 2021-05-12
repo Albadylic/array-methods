@@ -45,7 +45,7 @@ allNumbers.forEach(element=>{
 // PART TWO
 
 // Now that we have a maximum of five numbers
-// When the button is clicked, replace 'Result' with the result
+// When the button is clicked, replace 'Result' text with the result
 
 // Let's start with a function which outputs the numbers selected
 
