@@ -53,23 +53,31 @@ const radioArray = [doubler, multiples];
 
 function getsValuesFromElements(element){
     // Return the textContent of that element
-    return element.textContent;
+    return parseInt(element.textContent);
 }
 
 function replaceResult(){
     // use getsValuesFromElements() to map the textContent of each element into a new array. The new array will hold all of the 'values' i.e. the textContent
     const textArray = clickArr.map(element=>{
-        return parseInt(getsValuesFromElements(element));
+        return getsValuesFromElements(element);
     })
 
-    console.log(textArray[0] + textArray[1])
-
-    h3.textContent = clickArr[0].textContent;
+    h3.textContent = textArray.join(", ");
 }
 
 // Add an eventListener so that when the button is clicked, replace 'Result' text with the result
 
 goButton.addEventListener("click", replaceResult);
+
+// PART THREE
+
+// Now let's write specific functions for doubling and dividing (multiples)
+// We'll call these functions inside replaceResult
+
+
+// PART FOUR
+
+// Include a conditional statement in the replaceResult function which runs either function based on which radio button is clicked. 
 
 
 
